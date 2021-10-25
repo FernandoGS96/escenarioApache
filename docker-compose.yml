@@ -1,10 +1,10 @@
 version: '3'
 
 services:
-  webserver:
+  apacheweb:
     build: ./conf
     ports:
-      - '8081:80'
+      - '8181:80'
     volumes:
       - ./web:/var/www/html
       - ./conf/sri.asir4all.ss.conf:/etc/apache2/sites-available/000-default.conf
