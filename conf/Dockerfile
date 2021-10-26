@@ -1,10 +1,8 @@
 FROM php:7.4-apache
 
 RUN apt-get -y update \
-  && apt-get -y upgrade \
-  && apt-get install tzdata curl -y
-RUN ln -fs /usr/share/zoneinfo/Europe/Madrid /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
-
+  && apt-get -y upgrade 
+  
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOG_DIR /var/log/apache2
